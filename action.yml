@@ -10,6 +10,9 @@ inputs:
   max_timeout:
     description: "The max time to wait after the deployment is ready for a valid HTTP status code."
     required: false
+  commit_sha:
+    description: "The commit SHA associated with the Netlify deployment you're interested in."
+    required: false
 outputs:
   deploy_id:
     description: "The Netlify deployment ID"
