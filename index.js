@@ -93,7 +93,7 @@ const run = async () => {
   try {
     const netlifyToken = process.env.NETLIFY_TOKEN;
     const commitSha =
-      core.getInput('site_id') ||
+      core.getInput('commit_sha') ||
       (github.context.eventName === 'pull_request' ? github.context.payload.pull_request.head.sha : github.context.sha);
     const MAX_CREATE_TIMEOUT = 60 * 5; // 5 min
     const MAX_WAIT_TIMEOUT = 60 * 15; // 15 min
